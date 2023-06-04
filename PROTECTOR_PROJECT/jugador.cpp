@@ -20,11 +20,9 @@ jugador::jugador()
 
     setPos(448,358.4);
     calculo= new operaciones (x(),y(),0,0,70000);
-    //calculo->Maceleracion(40);
 
     mano->setPos(x()+20,y()+14);
-    mano->configuracion(manoPunk+"2"+png);
-    pistola->configuracion(armaB+"2"+png);
+
 
     animacion->start(100);
     andar->start(10);
@@ -37,8 +35,6 @@ jugador::~jugador()
     delete calculo;
     delete andar;
     delete secuencia_muerte;
-    //delete mano;
-    //delete pistola;
 
 }
 
