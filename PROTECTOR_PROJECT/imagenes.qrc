@@ -1,0 +1,83 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_05.png</file>
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_13.png</file>
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_14.png</file>
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_15.png</file>
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_16.png</file>
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_17.png</file>
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_11.png</file>
+        <file>sprites/zona sprites/1 Tiles/IndustrialTile_12.png</file>
+        <file>sprites/zona sprites/2 Background/Background.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/2/Idle.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/2/Attack.png</file>
+        <file>sprites/armas y movimientos sprites/3 Hands/2 Punk/2.png</file>
+        <file>sprites/armas y movimientos sprites/3 Hands/2 Punk/3.png</file>
+        <file>sprites/armas y movimientos sprites/2 Guns/3_1.png</file>
+        <file>sprites/armas y movimientos sprites/2 Guns/3_2.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/2/Walk.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/6/Walk.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/6/Attack.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/5/Walk.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/5/Attack.png</file>
+        <file>sprites/armas y movimientos sprites/5 Bullets/1.png</file>
+        <file>sprites/armas y movimientos sprites/5 Bullets/2.png</file>
+        <file>sprites/armas y movimientos sprites/5 Bullets/3.png</file>
+        <file>sprites/armas y movimientos sprites/5 Bullets/4_1.png</file>
+        <file>sprites/armas y movimientos sprites/2 Guns/2_1.png</file>
+        <file>sprites/armas y movimientos sprites/2 Guns/2_2.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/5/Death.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/5/Hurt.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/5/Idle.png</file>
+        <file>sprites/armas y movimientos sprites/5 Bullets/6.png</file>
+        <file>sprites/zona sprites/3 Objects/Mop.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/6/Idle.png</file>
+        <file>sprites/zona sprites/4 Animated objects/Card.png</file>
+        <file>sprites/zona sprites/3 Objects/Fire-extinguisher1.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/2/Death.png</file>
+        <file>sprites/enemigos robots y drones con armas y animaciones sprites/2/Hurt.png</file>
+        <file>sprites/zona sprites/2 Background/Sin título.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Attack_1.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Attack_2.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Attack_3.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Dead.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Hurt.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Idle.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Jump.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/JumpI.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Protect.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Run.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/RunI.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Converted_Vampire/Walk.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Attack_1.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Attack_2.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Attack_3.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Attack_4.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_1.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_2.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_3.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Blood_Charge_4.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Dead.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Hurt.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Idle.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Jump.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Run.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Countess_Vampire/Walk.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/PSD/Converted_Vampire_Spritelist.psd</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/PSD/Countess_Vampire_Spritelist.psd</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/PSD/Vampire_Girl_Spritelist.psd</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Attack_1.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Attack_2.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Attack_3.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Attack_4.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Dead.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Hurt.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Idle.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Jump.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Run.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Vampire_Girl/Walk.png</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Font.txt</file>
+        <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Licens.txt</file>
+        <file>sprites/armas y movimientos sprites/5 Bullets/9.png</file>
+    </qresource>
+</RCC>
