@@ -12,7 +12,7 @@ jugador::jugador()
 
     configuracion(punk,true,0,0,128,128);
 
-    CAMbloque(2);
+    CAMbloque(7);
     connect(animacion, SIGNAL (timeout()),this, SLOT(escena()));
     connect(andar, SIGNAL (timeout()),this, SLOT(movimientoX()));
     connect(secuencia_muerte, SIGNAL (timeout()),this, SLOT(muerte()));

@@ -79,5 +79,41 @@
         <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Font.txt</file>
         <file>sprites/craftpix-net-807039-free-vampire-pixel-art-sprite-sheets/Licens.txt</file>
         <file>sprites/armas y movimientos sprites/5 Bullets/9.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Attack_1.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Attack_2.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Attack_3.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Dead.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Hurt.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Idle.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Jump.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Run.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Scream.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Walk.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Attack_1.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Attack_2.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Attack_3.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Dead.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Flight.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Hurt.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Idle.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Run.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Scream.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Walk.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/PSD/Gotoku_spritelist.psd</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/PSD/Onre_spritelist.psd</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/PSD/Yurei_spritelist.psd</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Attack_1.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Attack_2.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Attack_3.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Attack_4.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Charge_1.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Charge_2.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Dead.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Hurt.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Idle.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Run.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Scream.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Walk.png</file>
+        <file>sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/License.txt</file>
     </qresource>
 </RCC>

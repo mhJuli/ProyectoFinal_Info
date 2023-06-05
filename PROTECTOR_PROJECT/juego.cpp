@@ -1,7 +1,10 @@
 #include "juego.h"
-
+#include "enemigo_1.h"
+#include "enemigo_2.h"
+#include "enemigo_3.h"
 #include "button.h"
 #include <QApplication>
+
 //Constructores
 juego::juego()
 {
@@ -72,14 +75,10 @@ void juego::iniciar_juego(){
     connect(Disparo_enemigos, SIGNAL (timeout()),this, SLOT(disparoEnemigos()));
 
     // Carga Enemigos Aleatoriamente
-    t_cargar_enemigos = new QTimer;
-    connect(t_cargar_enemigos, SIGNAL (timeout()), this, SLOT(cargar_enemigos()));
-    t_cargar_enemigos -> start(t_enemigos);
+    enemigo1 = new enemigo_1;
+    addItem(enemigo1);
 
-    movimiento_drones->start(150);
-    Disparo_enemigos->start(10);
 
-    trampolin =new objetivo ;
 
 
 }
@@ -326,3 +325,4 @@ void juego::keyPressEvent(QKeyEvent *i)
         t_disparo_protagonista -> start(10);
     }
 }
+
