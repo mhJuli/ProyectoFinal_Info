@@ -1,6 +1,6 @@
 #ifndef ENEMIGO_1_H
 #define ENEMIGO_1_H
-
+#include "operaciones.h"
 #include "base.h"
 
 
@@ -24,15 +24,19 @@ public:
     // Metodos
     void recibir_disparo();
     void terminar();
+    void notificacion_enemigo(int x,int y);
+    bool getvuelta();
+    operaciones *calculo;
 
 private:
 
-    QString enemigo1D= ":/sprites/enemigos robots y drones con armas y animaciones sprites/2/Attack.png";
-    QString enemigo1= ":/sprites/enemigos robots y drones con armas y animaciones sprites/2/Walk.png";
-    QString enemigo1I=":/sprites/enemigos robots y drones con armas y animaciones sprites/2/Idle.png";
-    QString enemigo1M = ":/sprites/enemigos robots y drones con armas y animaciones sprites/2/Death.png";
-    QString enemigo1H = ":/sprites/enemigos robots y drones con armas y animaciones sprites/2/Hurt.png";
+    QString enemigo1D= ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Attack_1.png";
+    QString enemigo1= ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Walk.png";
+    QString enemigo1I=":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Idle.png";
+    QString enemigo1M = ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Dead.png";
+    QString enemigo1H = ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Gotoku/Hurt.png";
     QTimer *t_caminar;
+    QTimer *t_avance;
     QTimer *t_mostrar_muerte;
     bool dobl=false;
     int cambioE1_sprite=0;
@@ -42,16 +46,18 @@ private:
     bool pausa=true;
     bool posF=false;
     int totalVidas=3;
-
-
+    bool vuelta=1;
+    int short cambio_sprit=0,cantidad_sprint=3,velocidad=scale_sprite*(23/2) ,signo;
 
 
     void estado_inicial();
 
 private slots:
+    void escena();
     void disparo();
     void cambioE1();
     void muerte();
+    void movimientoX();
 };
 
 #endif // ENEMIGO_1_H
