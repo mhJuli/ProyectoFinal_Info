@@ -33,16 +33,16 @@ struct qt_meta_stringdata_enemigo_1_t {
 static const qt_meta_stringdata_enemigo_1_t qt_meta_stringdata_enemigo_1 = {
     {
 QT_MOC_LITERAL(0, 0, 9), // "enemigo_1"
-QT_MOC_LITERAL(1, 10, 6), // "escena"
-QT_MOC_LITERAL(2, 17, 0), // ""
-QT_MOC_LITERAL(3, 18, 7), // "disparo"
-QT_MOC_LITERAL(4, 26, 8), // "cambioE1"
-QT_MOC_LITERAL(5, 35, 6), // "muerte"
+QT_MOC_LITERAL(1, 10, 7), // "disparo"
+QT_MOC_LITERAL(2, 18, 0), // ""
+QT_MOC_LITERAL(3, 19, 8), // "cambioE1"
+QT_MOC_LITERAL(4, 28, 6), // "muerte"
+QT_MOC_LITERAL(5, 35, 6), // "escena"
 QT_MOC_LITERAL(6, 42, 11) // "movimientoX"
 
     },
-    "enemigo_1\0escena\0\0disparo\0cambioE1\0"
-    "muerte\0movimientoX"
+    "enemigo_1\0disparo\0\0cambioE1\0muerte\0"
+    "escena\0movimientoX"
 };
 #undef QT_MOC_LITERAL
 
@@ -82,10 +82,10 @@ void enemigo_1::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         auto *_t = static_cast<enemigo_1 *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->escena(); break;
-        case 1: _t->disparo(); break;
-        case 2: _t->cambioE1(); break;
-        case 3: _t->muerte(); break;
+        case 0: _t->disparo(); break;
+        case 1: _t->cambioE1(); break;
+        case 2: _t->muerte(); break;
+        case 3: _t->escena(); break;
         case 4: _t->movimientoX(); break;
         default: ;
         }

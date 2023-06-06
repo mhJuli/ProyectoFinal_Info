@@ -63,11 +63,15 @@ void juego::iniciar_juego(){
     //addItem(personaje->pistola);
     addItem(personaje);
 
+    TimerGlobal =  new QTimer;
     t_disparo_protagonista=new QTimer;
     caida= new QTimer;
     movimiento_drones=new QTimer;
     Disparo_enemigos=new QTimer;
     invencible=new QTimer;
+
+    TimerGlobal->start(1);
+    connect(TimerGlobal, SIGNAL(timeout()), this, SLOT(Actualizar()));
 
     connect(invencible, SIGNAL (timeout()),this, SLOT(parpadeo()));
     connect(caida, SIGNAL (timeout()),this, SLOT(movimien()));
@@ -75,11 +79,12 @@ void juego::iniciar_juego(){
     connect(Disparo_enemigos, SIGNAL (timeout()),this, SLOT(disparoEnemigos()));
 
     // Carga Enemigos Aleatoriamente
-    enemigo1 = new enemigo_1;
-    addItem(enemigo1);
 
+    movimiento_drones->start(150);
+    Disparo_enemigos->start(10);
+    trampolin =new objetivo ;
 
-
+    cargar_enemigos();
 
 }
 
@@ -162,8 +167,21 @@ void juego::volver_a_iniciar(){
     addItem(quitButton);
 }
 
+void juego::MoverEnemigos()
+{
+  /*  QPointF Pos=enemigo->pos();
+    QPointF
+
+            Velocidad=enemigo->Velocidad;*/
+}
+
 void juego::salir(){
     QApplication::quit();
+}
+
+void juego::Actualizar()
+{
+    MoverEnemigos();
 }
 
 
@@ -241,6 +259,15 @@ void juego::iniciar(){
 }
 
 void juego::cargar_enemigos(){
+    enemigo = new enemigo_1;
+    addItem(enemigo);
+
+    enemigo2 = new enemigo_2;
+    addItem(enemigo2);
+
+   // enemigo3 = new enemigo_3;
+   // addItem(enemigo3);
+
 
 }
 
@@ -278,7 +305,7 @@ void juego::movimien()
         if(bl[i][0]->collidesWithItem(personaje))
         {
             personaje->calculo->setAY(0);
-            personaje->setPos(personaje->x(),bl[i][0]->y()-(48*1.2)-0.22);            
+            personaje->setPos(personaje->x(),bl[i][0]->y()-(48*1.2)-0.22);
             personaje->cargaCorrer();
             permisoO=true;
             caida->stop();

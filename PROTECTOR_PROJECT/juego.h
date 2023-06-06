@@ -11,6 +11,11 @@
 #include "polvora.h"
 #include "objetivo.h"
 #include "enemigo_1.h"
+#include "enemigo_2.h"
+#include "enemigo_3.h"
+#include "operaciones.h"
+#include "base.h"
+
 
 class juego : public QGraphicsScene
 {
@@ -22,10 +27,12 @@ public:
     //Destructores
     ~juego();
 
+    QTimer *TimerGlobal;
+
     //Metodos
     void mapa();
-    void keyPressEvent(QKeyEvent *i);
-    void notificacion_enemigo( int x, int y);
+    void keyPressEvent(QKeyEvent *i) override;
+    operaciones *calculo;
 
 
 private:
@@ -33,8 +40,10 @@ private:
     void iniciar();
     void mostrar_puntaje();
     void volver_a_iniciar();
+    void MoverEnemigos();
     int select_bloc(int i, int j);
     bool aleatorio(),permisoO=true,estado_invencible=true,prendido=true;
+
 
     unsigned dispa=0;
     unsigned dronesEnemigos=0,dronesbalas=0,limiteDrones;
@@ -44,7 +53,6 @@ private:
     unsigned total_enemigos2 = 0;
     unsigned total_enemigos3 = 0;
     unsigned puntaje_total = 0;
-
     float p = 0.3;
     objetivo *trampolin;
     bloques *bl[largo][2];
@@ -53,7 +61,10 @@ private:
     base *puntaje;
     base *nivel_etiqueta;
     jugador *personaje;
-    enemigo_1 *enemigo1;
+    enemigo_1 *enemigo;
+    enemigo_2 *enemigo2;
+    enemigo_3 *enemigo3;
+
     QGraphicsTextItem* puntaje_pad;
 
     int t_enemigos = 6000;
@@ -73,7 +84,7 @@ private:
 
 public slots:
 
-    void iniciar_juego();
+     void iniciar_juego();
 
     //movimiento personaje
     void movimien();
@@ -87,6 +98,8 @@ public slots:
     void cargar_enemigos();
     void parpadeo();
     void salir();
+
+    void Actualizar();
 
 };
 

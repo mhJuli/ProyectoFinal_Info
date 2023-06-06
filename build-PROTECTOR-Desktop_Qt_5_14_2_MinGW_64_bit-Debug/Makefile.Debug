@@ -252,6 +252,7 @@ debug/qrc_imagenes.cpp: ../PROTECTOR_PROJECT/imagenes.qrc \
 		../PROTECTOR_PROJECT/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Attack_2.png \
 		../PROTECTOR_PROJECT/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Dead.png \
 		../PROTECTOR_PROJECT/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Hurt.png \
+		../PROTECTOR_PROJECT/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/RunI.png \
 		../PROTECTOR_PROJECT/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Attack_1.png \
 		../PROTECTOR_PROJECT/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Walk.png \
 		../PROTECTOR_PROJECT/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Flight.png \
@@ -484,6 +485,7 @@ debug/moc_enemigo_1.cpp: ../PROTECTOR_PROJECT/enemigo_1.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject \
+		../PROTECTOR_PROJECT/operaciones.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/bin/moc.exe
 	C:\Qt\Qt5.14.2\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/LENOVO/Desktop/ProyectoFinal_Info/build-PROTECTOR-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++ -IC:/Users/LENOVO/Desktop/ProyectoFinal_Info/PROTECTOR_PROJECT -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.14.2/Tools/mingw730_64/x86_64-w64-mingw32/include ..\PROTECTOR_PROJECT\enemigo_1.h -o debug\moc_enemigo_1.cpp
@@ -584,6 +586,7 @@ debug/moc_enemigo_2.cpp: ../PROTECTOR_PROJECT/enemigo_2.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject \
+		../PROTECTOR_PROJECT/operaciones.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/bin/moc.exe
 	C:\Qt\Qt5.14.2\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/LENOVO/Desktop/ProyectoFinal_Info/build-PROTECTOR-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++ -IC:/Users/LENOVO/Desktop/ProyectoFinal_Info/PROTECTOR_PROJECT -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.14.2/Tools/mingw730_64/x86_64-w64-mingw32/include ..\PROTECTOR_PROJECT\enemigo_2.h -o debug\moc_enemigo_2.cpp
@@ -803,6 +806,9 @@ debug/moc_juego.cpp: ../PROTECTOR_PROJECT/juego.h \
 		../PROTECTOR_PROJECT/operaciones.h \
 		../PROTECTOR_PROJECT/polvora.h \
 		../PROTECTOR_PROJECT/objetivo.h \
+		../PROTECTOR_PROJECT/enemigo_1.h \
+		../PROTECTOR_PROJECT/enemigo_2.h \
+		../PROTECTOR_PROJECT/enemigo_3.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/bin/moc.exe
 	C:\Qt\Qt5.14.2\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/LENOVO/Desktop/ProyectoFinal_Info/build-PROTECTOR-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++ -IC:/Users/LENOVO/Desktop/ProyectoFinal_Info/PROTECTOR_PROJECT -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.14.2/Tools/mingw730_64/x86_64-w64-mingw32/include ..\PROTECTOR_PROJECT\juego.h -o debug\moc_juego.cpp
@@ -1034,6 +1040,9 @@ debug/moc_mainwindow.cpp: ../PROTECTOR_PROJECT/mainwindow.h \
 		../PROTECTOR_PROJECT/operaciones.h \
 		../PROTECTOR_PROJECT/polvora.h \
 		../PROTECTOR_PROJECT/objetivo.h \
+		../PROTECTOR_PROJECT/enemigo_1.h \
+		../PROTECTOR_PROJECT/enemigo_2.h \
+		../PROTECTOR_PROJECT/enemigo_3.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/bin/moc.exe
 	C:\Qt\Qt5.14.2\5.14.2\mingw73_64\bin\moc.exe $(DEFINES) --include C:/Users/LENOVO/Desktop/ProyectoFinal_Info/build-PROTECTOR-Desktop_Qt_5_14_2_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/win32-g++ -IC:/Users/LENOVO/Desktop/ProyectoFinal_Info/PROTECTOR_PROJECT -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore -I. -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.14.2/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.14.2/Tools/mingw730_64/x86_64-w64-mingw32/include ..\PROTECTOR_PROJECT\mainwindow.h -o debug\moc_mainwindow.cpp
@@ -1448,7 +1457,8 @@ debug/enemigo_1.o: ../PROTECTOR_PROJECT/enemigo_1.cpp ../PROTECTOR_PROJECT/enemi
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
-		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject
+		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject \
+		../PROTECTOR_PROJECT/operaciones.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\enemigo_1.o ..\PROTECTOR_PROJECT\enemigo_1.cpp
 
 debug/enemigo_2.o: ../PROTECTOR_PROJECT/enemigo_2.cpp ../PROTECTOR_PROJECT/enemigo_2.h \
@@ -1546,7 +1556,8 @@ debug/enemigo_2.o: ../PROTECTOR_PROJECT/enemigo_2.cpp ../PROTECTOR_PROJECT/enemi
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qbasictimer.h \
-		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject
+		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QObject \
+		../PROTECTOR_PROJECT/operaciones.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\enemigo_2.o ..\PROTECTOR_PROJECT\enemigo_2.cpp
 
 debug/enemigo_3.o: ../PROTECTOR_PROJECT/enemigo_3.cpp ../PROTECTOR_PROJECT/enemigo_3.h \
@@ -2009,6 +2020,9 @@ debug/main.o: ../PROTECTOR_PROJECT/main.cpp ../PROTECTOR_PROJECT/mainwindow.h \
 		../PROTECTOR_PROJECT/operaciones.h \
 		../PROTECTOR_PROJECT/polvora.h \
 		../PROTECTOR_PROJECT/objetivo.h \
+		../PROTECTOR_PROJECT/enemigo_1.h \
+		../PROTECTOR_PROJECT/enemigo_2.h \
+		../PROTECTOR_PROJECT/enemigo_3.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/qapplication.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -2144,6 +2158,9 @@ debug/mainwindow.o: ../PROTECTOR_PROJECT/mainwindow.cpp ../PROTECTOR_PROJECT/mai
 		../PROTECTOR_PROJECT/operaciones.h \
 		../PROTECTOR_PROJECT/polvora.h \
 		../PROTECTOR_PROJECT/objetivo.h \
+		../PROTECTOR_PROJECT/enemigo_1.h \
+		../PROTECTOR_PROJECT/enemigo_2.h \
+		../PROTECTOR_PROJECT/enemigo_3.h \
 		ui_mainwindow.h \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtCore/QVariant \
 		C:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/QtWidgets/QApplication \
