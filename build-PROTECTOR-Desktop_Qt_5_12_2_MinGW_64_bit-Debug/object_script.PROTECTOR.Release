@@ -1,0 +1,17 @@
+release/base.o
+release/bloques.o
+release/button.o
+release/enemigos.o
+release/juego.o
+release/jugador.o
+release/main.o
+release/mainwindow.o
+release/objetivo.o
+release/operaciones.o
+release/polvora.o
+release/qrc_imagenes.o
+release/moc_button.o
+release/moc_enemigos.o
+release/moc_juego.o
+release/moc_jugador.o
+release/moc_mainwindow.o

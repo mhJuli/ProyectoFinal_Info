@@ -10,7 +10,6 @@
 #include "jugador.h"
 #include "polvora.h"
 #include "objetivo.h"
-#include "enemigo_1.h"
 
 class juego : public QGraphicsScene
 {
@@ -24,9 +23,10 @@ public:
 
     //Metodos
     void mapa();
-    void keyPressEvent(QKeyEvent *i);
-    void notificacion_enemigo( int x, int y);
+    void keyPressEvent(QKeyEvent *i) override;
 
+    //Parte observador
+    //virtual void notificacion_enemigo(int tipo_enemigo, int x, int y, bool giro) override;
 
 private:
     void detener();
@@ -53,7 +53,6 @@ private:
     base *puntaje;
     base *nivel_etiqueta;
     jugador *personaje;
-    enemigo_1 *enemigo1;
     QGraphicsTextItem* puntaje_pad;
 
     int t_enemigos = 6000;
