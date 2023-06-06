@@ -2,7 +2,7 @@
 #define ENEMIGO_2_H
 
 #include "base.h"
-#include "operaciones.h"
+
 
 class enemigo_2:public QObject , public base
 {
@@ -16,45 +16,54 @@ public:
 
     ~enemigo_2();
 
+    // Metodos del Sujeto
+  //  void agregar_observador(Observer *obs) override;
+    //void remover_observador() override;
+  //  void notificar() override;
+
     // Propiedades
     int obtener_total_vidas();
 
     // Metodos
     void recibir_disparo();
     void terminar();
-    void estado_inicial();
-    void direccion();
-    void cargaCorrer();
-    bool getvuelta();
-    operaciones *calculo;
 
 private:
-    QString enemigo2D= ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Attack_1.png";
-    QString enemigo2= ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/RunI.png";
-    QString enemigo2I=":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Idle.png";
-    QString enemigo2M = ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Dead.png";
-    QString enemigo2H = ":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Onre/Hurt.png";
+    void estado_inicial();
+
+
+
+
+    QString enemigo2D=":/sprites/enemigos robots y drones con armas y animaciones sprites/6/Attack.png";
+    QString enemigo2=":/sprites/enemigos robots y drones con armas y animaciones sprites/6/Walk.png";
+    QString enemigo2M="";
+    QString enemigo_quieto=":/sprites/enemigos robots y drones con armas y animaciones sprites/6/Idle.png";
+
     QTimer *t_caminar;
     QTimer *t_mostrar_muerte;
-    QTimer *animacion;
-    bool dobl=false;
-    int cambioE2_sprite=0;
-    int cambioE2_spriteD=0;
-    int cambioE1_spriteI=0;
+
+    int cambioE2_sprite=0,
+    cambioE2_spriteD=0;
+
     bool giro2=true;
-    bool pausa2=true;
+    unsigned pausa2=1;
     bool posF2=false;
+    int punto2=85;
+    int punto_contrario2=2;
     int vidastotales=3;
-    int short cambio_sprite=0,cantidad_sprint=3,velocidad=scale_sprite*(23/2),signo;
-    bool vuelta=1;
-    enemigo_2 *enemigoDos;
+
+
+
+
+
+
+
 
 private slots:
-    void disparoE();
-    void cambioE();
-    void muerte();
-    void escena();
-    void movimientoX();
+
+     void cambioE();
+     void disparoE();
+     void muerte();
 };
 
 #endif // ENEMIGO_2_H
