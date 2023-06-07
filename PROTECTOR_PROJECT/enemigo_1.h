@@ -15,6 +15,7 @@ public:
     enemigo_1(bool posicionInicial, int vidas);
 
 
+
     // Deestructor
     ~enemigo_1();
 

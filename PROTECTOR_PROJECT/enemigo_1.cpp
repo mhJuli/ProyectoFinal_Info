@@ -35,12 +35,14 @@ int enemigo_1::obtener_total_vidas(){
 void enemigo_1::estado_inicial(){
     t_caminar = new QTimer;
     t_mostrar_muerte = new QTimer;
+    animacion =new QTimer;
     configuracion(enemigo1,true,0,0,128,128);
 
     CAMbloque(4);
 
     // Conectar timers con los slots
     connect(t_mostrar_muerte, SIGNAL (timeout()),this, SLOT(movimientoX()));
+    //connect(animacion, SIGNAL (timeout()),this, SLOT(direccion()));
     connect(t_caminar, SIGNAL (timeout()),this, SLOT(escena()));
     // Establece la dirección inical
 
@@ -49,11 +51,9 @@ void enemigo_1::estado_inicial(){
 
 
     calculo = new operaciones (x(),y(),0,0,70000);
-    t_caminar->start(300);
+    t_caminar->start(200);
     t_mostrar_muerte->start(10);
     movimientoX();
-
-
 
 }
 
@@ -63,11 +63,11 @@ void enemigo_1::muerte(){
 
 void enemigo_1::cambioE1()
 {
-    select_bloc(128,0,512,128,false,48*1.6,48*1.2,!posF);
-    if(cambioE1_sprite > cambioE1_spriteD)
-        cambioE1_sprite--;
+    select_bloc(cambioE1_sprite*48,0,48,43,false,48*1.6,48*1.2,!posF);
+    if(cambioE1_sprite < cambioE1_spriteD)
+        cambioE1_sprite++;
     else
-        cambioE1_sprite=cantidad_sprint;
+        cambioE1_sprite=0;
     if(pausa){
         if(posF){
             setPos(x()+10,y());
@@ -89,11 +89,11 @@ void enemigo_1::disparo()
 {
     if(cambioE1_sprite == cambioE1_spriteD){
         if(pausa){
-            configuracion(enemigo1D,true,0,0,128,128);
+            configuracion(enemigo1D,true,0,8,432,40);
 
         }
         else
-            configuracion(enemigo1,true,0,0,128,128);
+            configuracion(enemigo1,true,0,8,432,40);
         pausa = !pausa;
         cambioE1_spriteD = 3;
         cambioE1_sprite = 0;
@@ -113,7 +113,7 @@ void enemigo_1::terminar(){
 }
 void enemigo_1::escena()
 {
-    select_bloc(128,0,512,128,false,scale_sprite*x_jugador,2*y_jugador);
+    select_bloc(0,0,128,128,false,scale_sprite*x_jugador,2*y_jugador);
     if(vuelta)
     {
         if(cambio_sprit<cantidad_sprint)
@@ -142,7 +142,7 @@ void enemigo_1::movimientoX()
 {
     calculo->setVX(20);
     calculo->actualizarX(0.06667);
-
+    direccion();
     setPos(calculo->getPX(),y());
 
 }
