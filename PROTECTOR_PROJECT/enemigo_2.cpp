@@ -26,6 +26,9 @@ enemigo_2::enemigo_2(bool posicionInicial, int vidas)
 int enemigo_2::obtener_total_vidas(){
     return vidastotales;
 }
+
+
+
 //Destructores
 enemigo_2::~enemigo_2()
 {
@@ -37,14 +40,13 @@ enemigo_2::~enemigo_2()
 void enemigo_2::estado_inicial(){
     t_caminar = new QTimer;
     t_mostrar_muerte = new QTimer;
-   // animacion =new QTimer;
+
     configuracion(enemigo2,true,0,0,128,128);
 
     CAMbloque(4);
 
     // Conectar timers con los slots
     connect(t_mostrar_muerte, SIGNAL (timeout()),this, SLOT(movimientoX()));
-   // connect(animacion, SIGNAL (timeout()),this, SLOT(direccion()));
     connect(t_caminar, SIGNAL (timeout()),this, SLOT(escena()));
     // Establece la dirección inical
 
@@ -104,7 +106,6 @@ void enemigo_2::disparoE()
     }
     else if(cambioE2_sprite==cambioE2_spriteD and pausa2==1)
     {
-        //configuracion(enemigo_quieto,true,0,8,432,40);
         pausa2=0;
         cambioE2_spriteD=3;
         cambioE2_sprite=0;
@@ -132,7 +133,6 @@ void enemigo_2::muerte(){
 void enemigo_2::movimientoX()
 {
     calculo->setVX(-20);
-    if(x() and x()< (scale_sprite*16*largo))
     calculo->actualizarX(0.06667);
 
     setPos(calculo->getPX(),y());
@@ -158,15 +158,9 @@ void enemigo_2::direccion()
 void enemigo_2::cargaCorrer()
 {
 
-  //  pospistolaX=(tam_brazo_Descanso*4)/5;
-  //  pospistolaY=pospistolaX;
-
     if(vuelta)
     {
         configuracion(enemigo2,true,0,0,128,128);
-
-
-
 
     }
     else

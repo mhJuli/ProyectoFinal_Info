@@ -43,6 +43,8 @@ private:
     void MoverEnemigos();
     int select_bloc(int i, int j);
     bool aleatorio(),permisoO=true,estado_invencible=true,prendido=true;
+    void randomItem();
+    void agregarAleatorioItem();
 
 
     unsigned dispa=0;
@@ -72,7 +74,7 @@ private:
     int n=1;
 
     QTimer *caida
-    ,*t_disparo_protagonista,
+    , *timer ,*t_disparo_protagonista,
     *movimiento_drones,
     *Disparo_enemigos,
     *t_cargar_enemigos,

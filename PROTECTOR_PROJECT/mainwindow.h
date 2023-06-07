@@ -25,7 +25,6 @@ public:
     void menu_inicio();
     void removerFuera(QGraphicsItem* enemigo);
     void removerFuera2(QGraphicsItem* enemigoDos);
-
     //Destructor
     ~MainWindow();
 

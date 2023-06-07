@@ -42,7 +42,7 @@ void enemigo_3::estado_inicial()
 {
     t_caminar = new QTimer;
     t_mostrar_muerte= new QTimer;
-    configuracion(enemigo3,true,0,10,432,40);
+    configuracion(enemigo3,true,0,0,128,128);
 
     CAMbloque(3);
 
@@ -51,18 +51,16 @@ void enemigo_3::estado_inicial()
     connect(t_mostrar_muerte, SIGNAL(timeout()), this, SLOT(muerte()));
 
     // Establece la dirección inical
-    if(posF3)
-        setPos(0,16*(ancho*2/11)*scale_sprite);
-    else
-        setPos(16*(largo)*scale_sprite,16*(ancho*2/11)*scale_sprite);
+
+    setPos(16*(largo)*scale_sprite,y()+255);
 
     // Iniciar movimiento
-    t_caminar->start(300);
+    t_caminar->start(100);
 }
 
 void enemigo_3::cambioE3()
 {
-    select_bloc(cambioE3_sprite*48,0,35,43,false,30*scale_sprite,30*scale_sprite,giro3);
+    select_bloc(128,0,512,128,false,30*scale_sprite,30*scale_sprite,giro3);
     if(cambioE3_sprite<cambioE3_spriteD)
     {
         cambioE3_sprite++;
@@ -99,7 +97,7 @@ void enemigo_3::disparoE3()
 
     if(cambioE3_sprite==cambioE3_spriteD and pausa3==0)
     {
-        configuracion(enemigo3,true,0,8,432,40);
+        configuracion(enemigo3,true,0,0,128,128);
         pausa3=1;
         cambioE3_spriteD=3;
         cambioE3_sprite=0;
@@ -107,7 +105,7 @@ void enemigo_3::disparoE3()
     }
     else if (cambioE3_sprite==cambioE3_spriteD and pausa3==1)
     {
-        configuracion(enemigo3D,true,0,8,432,40);
+        configuracion(enemigo3D,true,0,0,128,128);
         pausa3=2;
         cambioE3_spriteD=3;
         cambioE3_sprite=0;
@@ -115,7 +113,7 @@ void enemigo_3::disparoE3()
     }
     else if(cambioE3_sprite==cambioE3_spriteD and pausa3==2)
     {
-        configuracion(enemigo_quieto,true,0,8,432,40);
+        configuracion(enemigo_quieto,true,0,0,128,128);
         pausa3=0;
         cambioE3_spriteD=3;
         cambioE3_sprite=0;
@@ -132,7 +130,7 @@ void enemigo_3::recibir_disparo(){
     vidastotales--;
     if(vidastotales == 0){
         delete t_caminar;
-        configuracion(enemigo_muerte,true,0,0,288,48);
+        configuracion(enemigo_muerte,true,0,0,128,128);
         cambioE3_sprite = 0;
         t_mostrar_muerte -> start(500);
     }
