@@ -54,7 +54,7 @@ void enemigo_2::estado_inicial(){
 
     calculo = new operaciones (x(),y(),0,0,70000);
     t_caminar->start(200);
-    t_mostrar_muerte->start(40);
+    t_mostrar_muerte->start(10);
     movimientoX();
 
 }
@@ -134,27 +134,6 @@ void enemigo_2::movimientoX()
     calculo->setVX(-20);
     if(x() and x()< (scale_sprite*16*largo))
     calculo->actualizarX(0.06667);
-    if( x()+10 < 0 )
-    {
-        direccion();
-    }
-    if(x()+x_jugador*scale_sprite > (scale_sprite*16*largo))
-    {
-        direccion();
-    }
-
-    if((calculo->getVX() > velocidad) and ( calculo->getAX() > 0 ) )
-    {
-        calculo->setAX(0);
-        calculo->setVX(20);
-    }
-    else if( (calculo->getVX() < velocidad) and (calculo->getAX() < 0)  )
-    {
-        calculo->setAX(0);
-        calculo->setVX(-20);
-
-    }
-
 
     setPos(calculo->getPX(),y());
 

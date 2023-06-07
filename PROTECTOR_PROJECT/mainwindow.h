@@ -23,6 +23,8 @@ public:
     void setup_window();
     void setup_juego();
     void menu_inicio();
+    void removerFuera(QGraphicsItem* enemigo);
+    void removerFuera2(QGraphicsItem* enemigoDos);
 
     //Destructor
     ~MainWindow();
@@ -32,6 +34,8 @@ private:
     Ui::MainWindow *ui;
     juego *scene;
     base *logo;
+    enemigo_1 *enemigo;
+    enemigo_1 *enemigoDos;
 
 public slots:
     void iniciar_juego();

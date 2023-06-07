@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "button.h"
 #include "base.h"
+#include "enemigo_1.h"
+
 //Constructores
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -69,3 +71,24 @@ MainWindow::~MainWindow()
     delete scene;
 }
 
+void MainWindow::removerFuera(QGraphicsItem* enemigo)
+{
+    QRectF sceneRect = scene->sceneRect(); // Obtener los límites de la escena
+    QRectF itemRect = enemigo->sceneBoundingRect(); // Obtener el rectángulo del objeto en la escena
+
+    if (!sceneRect.contains(itemRect)) {
+        scene->removeItem(enemigo); // Remover el objeto de la escena
+        delete enemigo; // Liberar la memoria del objeto si es necesario
+    }
+}
+
+void MainWindow::removerFuera2(QGraphicsItem* enemigoDos)
+{
+    QRectF sceneRect = scene->sceneRect(); // Obtener los límites de la escena
+    QRectF itemRect = enemigoDos->sceneBoundingRect(); // Obtener el rectángulo del objeto en la escena
+
+    if (!sceneRect.contains(itemRect)) {
+        scene->removeItem(enemigoDos); // Remover el objeto de la escena
+        delete enemigoDos; // Liberar la memoria del objeto si es necesario
+    }
+}
