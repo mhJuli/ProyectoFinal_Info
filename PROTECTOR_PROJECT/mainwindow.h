@@ -1,6 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "ui_mainwindow.h"
 #include <QMainWindow>
 #include "bloques.h"
 #include "macros.h"
@@ -25,6 +25,7 @@ public:
     void menu_inicio();
     void removerFuera(QGraphicsItem* enemigo);
     void removerFuera2(QGraphicsItem* enemigoDos);
+    void removerFuera3(QGraphicsItem* enemigoTres);
 
     //Destructor
     ~MainWindow();
@@ -36,6 +37,7 @@ private:
     base *logo;
     enemigo_1 *enemigo;
     enemigo_1 *enemigoDos;
+    enemigo_1 *enemigoTres;
 
 public slots:
     void iniciar_juego();

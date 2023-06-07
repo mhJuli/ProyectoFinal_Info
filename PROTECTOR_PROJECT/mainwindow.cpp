@@ -92,3 +92,13 @@ void MainWindow::removerFuera2(QGraphicsItem* enemigoDos)
         delete enemigoDos; // Liberar la memoria del objeto si es necesario
     }
 }
+void MainWindow::removerFuera3(QGraphicsItem* enemigoTres)
+{
+    QRectF sceneRect = scene->sceneRect(); // Obtener los límites de la escena
+    QRectF itemRect = enemigoTres->sceneBoundingRect(); // Obtener el rectángulo del objeto en la escena
+
+    if (!sceneRect.contains(itemRect)) {
+        scene->removeItem(enemigoTres); // Remover el objeto de la escena
+        delete enemigoTres; // Liberar la memoria del objeto si es necesario
+    }
+}

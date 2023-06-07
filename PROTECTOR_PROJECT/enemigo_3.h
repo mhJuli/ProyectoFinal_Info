@@ -31,10 +31,10 @@ private:
 
      void estado_inicial();
 
-    QString enemigo3D=":/sprites/enemigos robots y drones con armas y animaciones sprites/5/Attack.png";
-    QString enemigo3=":/sprites/enemigos robots y drones con armas y animaciones sprites/5/Walk.png";
-    QString enemigo_quieto=":/sprites/enemigos robots y drones con armas y animaciones sprites/5/Idle.png" ;
-    QString enemigo_muerte=":/sprites/enemigos robots y drones con armas y animaciones sprites/5/Death.png";
+    QString enemigo3D=":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Attack_1.png";
+    QString enemigo3=":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Walk.png";
+    QString enemigo_quieto=":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Idle.png" ;
+    QString enemigo_muerte=":/sprites/craftpix-net-413273-free-ghost-pixel-art-sprite-sheets/Yurei/Dead.png";
 
     QTimer *t_caminar;
     QTimer *t_mostrar_muerte;

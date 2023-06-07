@@ -33,8 +33,6 @@ public:
     void mapa();
     void keyPressEvent(QKeyEvent *i) override;
     operaciones *calculo;
-    virtual void notificacion_enemigo(int tipo_enemigo, int x, int y, bool giro);
-
 
 
 private:
@@ -45,6 +43,8 @@ private:
     void MoverEnemigos();
     int select_bloc(int i, int j);
     bool aleatorio(),permisoO=true,estado_invencible=true,prendido=true;
+
+
 
 
     unsigned dispa=0;
@@ -69,12 +69,12 @@ private:
 
     QGraphicsTextItem* puntaje_pad;
 
-    int t_enemigos = 6000;
+    int t_enemigos = 4000;
     int e1_vidas = 3,Cparpadeo=10,Iparpadeo=0;
     int n=1;
 
     QTimer *caida
-    ,*t_disparo_protagonista,
+    , *timer ,*t_disparo_protagonista,
     *movimiento_drones,
     *Disparo_enemigos,
     *t_cargar_enemigos,

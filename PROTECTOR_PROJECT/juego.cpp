@@ -87,7 +87,9 @@ void juego::iniciar_juego(){
     Disparo_enemigos->start(10);
     trampolin =new objetivo ;
 
-    cargar_enemigos();
+
+     cargar_enemigos();
+
 
 }
 
@@ -170,7 +172,10 @@ void juego::volver_a_iniciar(){
     addItem(quitButton);
 }
 
+void juego::MoverEnemigos()
+{
 
+}
 
 void juego::salir(){
     QApplication::quit();
@@ -183,7 +188,8 @@ void juego::Actualizar()
 
 void juego::colision()
 {
-    if ((personaje->collidesWithItem(enemigo)&& enemigo != nullptr)||(personaje->collidesWithItem(enemigo2)&& enemigo2 != nullptr)){
+
+    if ((personaje->collidesWithItem(enemigo)&& enemigo != nullptr)||(personaje->collidesWithItem(enemigo2)&& enemigo2 != nullptr)||(personaje->collidesWithItem(enemigo3)&& enemigo3 != nullptr)){
          if (estado_invencible) {
              personaje->recibir_disparo();
               estado_invencible=false;
@@ -194,7 +200,6 @@ void juego::colision()
                  detener();}
 }
     }
-
 }
 
 void juego::disparo_protagonista()
@@ -205,6 +210,7 @@ void juego::disparo_protagonista()
         {
             cartuchoprota[var]->fisicas();
             QList<QGraphicsItem *> items = collidingItems(cartuchoprota[var], Qt::ItemSelectionMode::IntersectsItemShape);
+
             foreach (QGraphicsItem * i, items) {
                 enemigo_1 * e1 = dynamic_cast<enemigo_1 *>(i);
                 if(e1){
@@ -218,7 +224,8 @@ void juego::disparo_protagonista()
                     }
                     else{
                         this -> removeItem(i);
-                        total_enemigos1--;
+                        e1->terminar();
+                        total_enemigos1=0;
                         puntaje_total += 10;
                         mostrar_puntaje();
                         enemigo=nullptr;
@@ -236,19 +243,47 @@ void juego::disparo_protagonista()
                     }
                     else{
                         this -> removeItem(i);
-                        total_enemigos2--;
+                        e2->terminar();
+                        total_enemigos2=0;
                         puntaje_total += 20;
                         mostrar_puntaje();
                         enemigo2=nullptr;
                     }
                 }
-
+                enemigo_3 * e3 = dynamic_cast<enemigo_3 *>(i);
+                if(e3){
+                    e3->recibir_disparo();
+                    removeItem(cartuchoprota[var]);
+                    cartuchoprota.remove(var);
+                    dispa--;
+                    if(e3->obtener_total_vidas() > 0){
+                        exit = true;
+                        break;
+                    } else {
+                        this -> removeItem(i);
+                        total_enemigos3--;
+                        puntaje_total += 30;
+                        mostrar_puntaje();
+                        enemigo3=nullptr;
+                    }
+                }
+                polvora * e4 = dynamic_cast<polvora *>(i);
+                if(e4){
+                    cartuchoEnemigos.remove(cartuchoEnemigos.indexOf(e4));
+                    removeItem(e4);
+                    dronesbalas--;
+                    dispa--;
+                    removeItem(cartuchoprota[var]);
+                    cartuchoprota.remove(var);
+                    exit = true;
+                    break;
+                }
             }
             if(puntaje_total > 99999)
                 puntaje_total=0;
             if(exit) break;
-    }}
-        else {
+        }
+    } else {
         t_disparo_protagonista->stop();
     }
 }
@@ -287,43 +322,6 @@ void juego::disparoEnemigos()
          trampolin->Msen();
 }
 
-
-void juego::notificacion_enemigo(int tipo_enemigo, int x, int y, bool giro){
-    int v;
-    if(giro)
-        {v = 1;}
-    else
-        {v = -1;}
-    polvora *p = new polvora();
-    polvora *s = new polvora();
-    switch(tipo_enemigo){
-        case 1:
-            p->Iparametros(":/sprites/armas y movimientos sprites/5 Bullets/6.png",
-                           x+10,y+10,0,0,v*scale_sprite*10,0,0,giro);
-            cartuchoEnemigos.push_back(p);
-            dronesbalas++;
-            addItem(p);
-        break;
-        case 2:
-            p->Iparametros(":/sprites/armas y movimientos sprites/5 Bullets/3.png",
-                       x+((20.4*scale_sprite)),y+(14.4*scale_sprite),0,40,v*50,-90,0,false,10*scale_sprite);
-            cartuchoEnemigos.push_back(p);
-            dronesbalas++;
-            addItem(p);
-
-            s->Iparametros(":/sprites/armas y movimientos sprites/5 Bullets/3.png",
-                       x+((20.4*scale_sprite)),y+(14.4*scale_sprite),0,40,v*50,-45,0,false,10*scale_sprite);
-
-            cartuchoEnemigos.push_back(s);
-            dronesbalas++;
-            addItem(s);
-        break;
-
-    }
-
-}
-
-
 void juego::detener(){
     puntaje = 0;
     t_disparo_protagonista->stop();
@@ -333,6 +331,32 @@ void juego::detener(){
     invencible->stop();
     t_cargar_enemigos->stop();
     removeItem(personaje);
+    for(unsigned i = 0; i < cartuchoEnemigos.length();i++){
+        removeItem(cartuchoEnemigos[i]);
+    }
+    for(unsigned i = 0; i < cartuchoprota.length();i++){
+        removeItem(cartuchoprota[i]);
+    }
+    cartuchoEnemigos.remove(0,cartuchoEnemigos.length());
+    cartuchoprota.remove(0,cartuchoprota.length());
+    dronesbalas = 0;
+    dispa = 0;
+    foreach (QGraphicsItem *var, items_totales) {
+        enemigo_1 * e1 = dynamic_cast<enemigo_1 *>(var);
+        if(e1){
+            e1->terminar();
+        }
+        enemigo_2 * e2 = dynamic_cast<enemigo_2 *>(var);
+        if(e2){
+            e2->terminar();
+        }
+        enemigo_3 * e3 = dynamic_cast<enemigo_3 *>(var);
+        if(e3){
+            e3->terminar();
+        }
+        removeItem(var);
+    }
+    volver_a_iniciar();
 
 }
 
@@ -346,20 +370,14 @@ void juego::iniciar(){
 }
 
 void juego::cargar_enemigos(){
-
-    enemigo = new enemigo_1(aleatorio(),e1_vidas);
+    enemigo = new enemigo_1;
     addItem(enemigo);
-    items_totales.push_back(enemigo);
-    total_enemigos1++;
 
-    enemigo2 = new enemigo_2(aleatorio(),e1_vidas);
+    enemigo2 = new enemigo_2;
     addItem(enemigo2);
-    items_totales.push_back(enemigo2);
-    total_enemigos1++;
 
-   // enemigo3 = new enemigo_3;
-   // addItem(enemigo3);
-
+    enemigo3 = new enemigo_3;
+    addItem(enemigo3);
 
 }
 
@@ -445,3 +463,7 @@ void juego::keyPressEvent(QKeyEvent *i)
     }
 }
 
+/*void crearProyectil(QString nombre, float px, float py, float ax, float ay, float vx, float vy, float mass, bool vuelta, float dimension) {
+    polvora* proyectil = new polvora();
+    proyectil->Iparametros(":/sprites/armas y movimientos sprites/5 Bullets/6.png", px, py, ax, ay, vx, vy, mass, vuelta, dimension);
+}*/
